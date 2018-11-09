@@ -3,7 +3,9 @@ module.exports = {
   entry: "./src/kabu.js",
   output: {
     path: `${__dirname}/dist`,
-    filename: "kabu.js"
+    filename: "kabu.js",
+    library: undefined,
+    libraryTarget: "umd"
   },
   module: {
     rules: [
