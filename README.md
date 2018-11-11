@@ -1,5 +1,8 @@
 # _kabu.js_
 
+[![npm version](https://badge.fury.io/js/kabu.svg)](https://badge.fury.io/js/kabu)
+[![Build Status](https://travis-ci.org/7110/kabu.svg?branch=master)](https://travis-ci.org/7110/kabu)
+
 > kabu.js is a JavaScript library about listed stocks.
 
 ## Feature
