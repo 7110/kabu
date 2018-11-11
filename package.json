@@ -1,4 +1,26 @@
 {
+  "name": "kabu",
+  "description": "kabu.js is a JavaScript library about listed stocks.",
+  "version": "1.0.0",
+  "main": "dist/kabu.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7110/kabu.git"
+  },
+  "keywords": [
+    "kabu",
+    "kabu.js",
+    "stocks"
+  ],
+  "author": "7110 (https://github.com/7110)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/7110/kabu/issues"
+  },
+  "homepage": "https://github.com/7110/kabu",
   "scripts": {
     "build": "webpack --watch --config webpack.config.js",
     "test": "jest"
