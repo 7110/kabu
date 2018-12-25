@@ -1,7 +1,7 @@
 {
   "name": "kabu",
   "description": "kabu.js is a JavaScript library about listed stocks.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/kabu.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,9 @@
   "keywords": [
     "kabu",
     "kabu.js",
-    "stocks"
+    "stocks",
+    "Japan markets",
+    "Japan"
   ],
   "author": "7110 (https://github.com/7110)",
   "license": "MIT",
