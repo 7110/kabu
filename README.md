@@ -5,9 +5,11 @@
 
 > kabu.js is a JavaScript library about listed stocks.
 
+
 ## Feature
 
 _kabu.js_ is a very light library with **240 KB or less**, despite it has dictionary data on all stocks in Japan!
+
 
 ## Getting Started
 
@@ -26,6 +28,7 @@ npm install kabu --save
 # using yarn
 yarn add kabu
 ```
+
 
 ## Using _kabu.js_
 
@@ -85,3 +88,8 @@ kabu.get(4689);
 #### help
 
 `help` method is going to print version, updated and so on on console
+
+
+## Data
+
+**_kabu.js_'s data is made on https://github.com/7110/kabu-data**
