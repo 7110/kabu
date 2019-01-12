@@ -1,6 +1,8 @@
 "use strict";
 
-import { Kabu } from "../dist/kabu.js";
+import {
+  Kabu
+} from "../dist/kabu.js";
 
 describe("Kabu", () => {
   let kabu;
@@ -47,6 +49,14 @@ describe("Kabu", () => {
     };
 
     let sb2 = {
+      code: 9434,
+      name: "ソフトバンク",
+      market: "市場第一部（内国株）",
+      industry17: "情報通信・サービスその他 ",
+      industry33: "情報・通信業"
+    };
+
+    let sb3 = {
       code: 9984,
       name: "ソフトバンクグループ",
       market: "市場第一部（内国株）",
@@ -61,9 +71,10 @@ describe("Kabu", () => {
 
     test("match ソフトバンク", () => {
       let res = kabu.search("ソフトバンク");
-      expect(res.length).toEqual(2);
+      expect(res.length).toEqual(3);
       expect(res[0]).toEqual(sb1);
       expect(res[1]).toEqual(sb2);
+      expect(res[2]).toEqual(sb3);
     });
   });
 });
