@@ -6,8 +6,8 @@ export class Kabu {
     this.__manual = require("./data/manual.json");
 
     this.__author = "7110";
-    this.version = "1.0.1";
-    this.updated = "2018/11";
+    this.version = "1.0.2";
+    this.updated = "2018/12";
   }
 
   __substitute(item) {
