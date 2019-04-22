@@ -1,7 +1,7 @@
 {
   "name": "kabu",
   "description": "kabu.js is a JavaScript library about listed stocks.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/kabu.js",
   "directories": {
     "test": "test"
