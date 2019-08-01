@@ -35,7 +35,7 @@ export class Kabu {
     const res = this._main.find(item => {
       return item.c == code;
     });
-    return this.substitute(res);
+    return this._substitute(res);
   }
 
   // search: return list of brand name details searched by keyword
