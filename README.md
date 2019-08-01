@@ -8,7 +8,7 @@
 
 ## Feature
 
-_kabu.js_ is a very light library with **240 KB or less**, despite it has dictionary data on all stocks in Japan!
+_kabu.js_ is a stock informations library. It has dictionary data on all stocks in Japan!
 
 
 ## Getting Started
