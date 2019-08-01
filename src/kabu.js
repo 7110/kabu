@@ -1,23 +1,24 @@
 'use strict';
 
+import pkg from '../package'
+
 export class Kabu {
   constructor() {
-    this._main = require('./data/main.json');
+    this._data = require('./data/main.json');
     this._manual = require('./data/manual.json');
 
     this._author = '7110';
-    this.version = '1.0.8';
-    this.updated = '2019/07';
+    this._version = pkg.version;
   }
 
   _substitute(item) {
     const res = {};
     if (item && (item.c && item.n)) {
-      res['code'] = item.c;
-      res['name'] = item.n;
-      res['market'] = this._manual['markets'][item.m];
-      res['industry17'] = this._manual['industry17'][item.i17];
-      res['industry33'] = this._manual['industry33'][item.i33];
+      res.code = item.c;
+      res.name = item.n;
+      res.market = this._manual.markets[item.m];
+      res.industry17 = this._manual.industry17[item.i17];
+      res.industry33 = this._manual.industry33[item.i33];
     }
     return res;
   }
@@ -30,18 +31,30 @@ export class Kabu {
     return res;
   }
 
+  _getHalfSize(text) {
+    return text.replace(
+      /[Ａ-Ｚａ-ｚ０-９]/g,
+      s => String.fromCharCode(s.charCodeAt(0) - 0xFEE0)
+    )
+  }
+
   // get: return brand name details searched by code
   get(code) {
-    const res = this._main.find(item => {
-      return item.c == code;
+    const res = this._data.find(brandName => {
+      return brandName.c == code;
     });
     return this._substitute(res);
   }
 
   // search: return list of brand name details searched by keyword
   search(keyword) {
-    const res = this._main.filter(item => {
-      return item.n.includes(keyword);
+    const keywordHalfSize = this._getHalfSize(keyword).toLowerCase()
+
+    const res = this._data.filter(brandName => {
+      const brandNameHalfSize = this._getHalfSize(brandName.n).toLowerCase()
+      return (
+        brandNameHalfSize.includes(keywordHalfSize)
+      );
     });
 
     const results = [];
@@ -65,8 +78,8 @@ export class Kabu {
   help() {
     console.log(
       `Kabu.js 📈\ndocument: https://github.com/7110/kabu-data\nversion: ${
-        this.version
-      }\nupdated: ${this.updated}\nauthor: ${this._author}`
+        this._version
+      }\nauthor: ${this._author}`
     );
   }
 }
