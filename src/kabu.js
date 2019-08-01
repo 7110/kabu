@@ -32,10 +32,10 @@ export class Kabu {
 
   // get: return brand name details searched by code
   get(code) {
-    const res = this._.find(item => {
+    const res = this._main.find(item => {
       return item.c == code;
     });
-    return this._substitute(res);
+    return this.substitute(res);
   }
 
   // search: return list of brand name details searched by keyword
@@ -66,7 +66,7 @@ export class Kabu {
     console.log(
       `Kabu.js 📈\ndocument: https://github.com/7110/kabu-data\nversion: ${
         this.version
-      }\nupdated: ${this.updated}\nauthor: ${this.__author}`
+      }\nupdated: ${this.updated}\nauthor: ${this._author}`
     );
   }
 }
