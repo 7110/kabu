@@ -51,13 +51,6 @@ kabu.search("ソフトバンク");
 ```text
 [
   {
-    code: 4726,
-    name: "ソフトバンク・テクノロジー",
-    market: "市場第一部（内国株）",
-    industry17: "情報通信・サービスその他 ",
-    industry33: "情報・通信業"
-  },
-  {
     code: 9434,
     name: "ソフトバンク",
     market: "市場第一部（内国株）",
@@ -85,7 +78,7 @@ kabu.get(4689);
 ```text
 {
   code: 4689,
-  name: "ヤフー",
+  name: "Ｚホールディングス",
   market: "市場第一部（内国株）",
   industry17: "情報通信・サービスその他 ",
   industry33: "情報・通信業"

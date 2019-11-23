@@ -15,7 +15,7 @@ describe('Kabu', () => {
   describe('get', () => {
     const yahoo = {
       code: 4689,
-      name: 'ヤフー',
+      name: 'Ｚホールディングス',
       market: '市場第一部（内国株）',
       industry17: '情報通信・サービスその他 ',
       industry33: '情報・通信業'
@@ -41,14 +41,6 @@ describe('Kabu', () => {
   // test of search method
   describe('search', () => {
     const sb1 = {
-      code: 4726,
-      name: 'ソフトバンク・テクノロジー',
-      market: '市場第一部（内国株）',
-      industry17: '情報通信・サービスその他 ',
-      industry33: '情報・通信業'
-    };
-
-    const sb2 = {
       code: 9434,
       name: 'ソフトバンク',
       market: '市場第一部（内国株）',
@@ -56,7 +48,7 @@ describe('Kabu', () => {
       industry33: '情報・通信業'
     };
 
-    const sb3 = {
+    const sb2 = {
       code: 9984,
       name: 'ソフトバンクグループ',
       market: '市場第一部（内国株）',
@@ -66,10 +58,9 @@ describe('Kabu', () => {
 
     test('match ソフトバンク', () => {
       const res = kabu.search('ソフトバンク');
-      expect(res.length).toEqual(3);
+      expect(res.length).toEqual(2);
       expect(res[0]).toEqual(sb1);
       expect(res[1]).toEqual(sb2);
-      expect(res[2]).toEqual(sb3);
     });
 
     test('not match', () => {
